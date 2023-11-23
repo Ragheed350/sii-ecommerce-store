@@ -142,10 +142,12 @@ const ProductList = () => {
         </div>
         <div className="grid grid-cols-3 gap-4">
           {sortedArray.map((product) => (
-            <div key={product.id} className="bg-white p-4 rounded-lg shadow-md">
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
-              <h2 className="text-lg font-bold mb-2">{product.name}</h2>
-            </div>
+            <a href={`/${product.id}`}>
+              <div key={product.id} className="bg-white p-4 rounded-lg shadow-md">
+                <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
+                <h2 className="text-lg font-bold mb-2">{product.name}</h2>
+              </div>
+            </a>
           ))}
         </div>
       </div>

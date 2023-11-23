@@ -14,24 +14,24 @@ export default function Header({}: Props) {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <a href="#" className="text-black">
+              <a href="/" className="text-black">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="text-black">
+              <a href="/" className="text-black">
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="text-black">
+              <a href="/" className="text-black">
                 Products
               </a>
             </li>
           </ul>
         </nav>
-        <div>
-          <button className="text-black">Login</button>
+        <div className="space-x-2">
+          <button className="text-black">Login </button>
           <button className="text-black">Sign Up</button>
         </div>
       </header>
