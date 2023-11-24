@@ -1,9 +1,11 @@
 import React from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
+import { useAppSelector } from "../redux/store"
 
 type Props = {}
 
 export default function Header({}: Props) {
+  const { cart } = useAppSelector((state) => state.CartSlice)
   return (
     <>
       <header className="flex items-center justify-between p-4 bg-white">
@@ -31,8 +33,9 @@ export default function Header({}: Props) {
           </ul>
         </nav>
         <div className="space-x-2">
-          <button className="text-black">Login </button>
-          <button className="text-black">Sign Up</button>
+          <Link to={"/cart"}>
+            <button className="text-black">Cart {cart.length}</button>
+          </Link>
         </div>
       </header>
       <Outlet />
